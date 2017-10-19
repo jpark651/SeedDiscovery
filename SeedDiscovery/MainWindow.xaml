@@ -1,0 +1,23 @@
+﻿<Window x:Class="SeedDiscovery.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Background="Black" Foreground="White" BorderBrush="Red"
+        Title="NecroSeed DiscoVery" Height="600" Width="300" ResizeMode="CanMinimize">
+    <Grid Width="279" Height="539">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="60*" />
+            <ColumnDefinition Width="207*" />
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="64,3,6,0" Height="46" Width="146" Name="seedHeader" IsHitTestVisible="False" FontSize="20" FontStretch="Normal" FontStyle="Normal" FontWeight="Bold" TextAlignment="Center" Text="Seed List" />
+        <Rectangle Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="65,-2,0,0" Height="36" Width="145" Name="seedOutline" IsHitTestVisible="False" Stroke="Red" />
+        <TextBox Grid.Column="1" Background="Black" BorderBrush="red" Foreground="White" IsReadOnly="True" Margin="65,34,7,0" Name="seedBox" VerticalScrollBarVisibility="Auto" TextWrapping="Wrap" />
+        <Button Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Top" Background="Black" BorderBrush="Red" Foreground="White" Margin="12,34,0,0" Height="37" Width="98" Name="fileSelect" BorderThickness="3" Click="fileSelect_Click" Content="Select Replay" />
+        <TextBlock Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,157,0,0" Height="19" Width="98" Name="prefixHeader" IsHitTestVisible="False" FontSize="12" FontStretch="Normal" FontStyle="Italic" FontWeight="Normal" TextAlignment="Center" Text="Prefix (optional):" />
+        <Rectangle Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,157,0,0" Height="19" Width="98" Name="prefixOutline" IsHitTestVisible="False" Stroke="Red" />
+        <TextBox Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Top" Background="Black" BorderBrush="Red" Foreground="White" IsReadOnly="True"  Margin="12,0,0,0"   Height="55"  Width="98" Name="spacesInfo" Visibility="Hidden" IsEnabled="True" IsHitTestVisible="False" Focusable="False" TextAlignment="Center" TextWrapping="Wrap" Text="Spaces are represented by underscores." />
+        <TextBox Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Top" Background="Black" BorderBrush="Red" Foreground="White" IsReadOnly="False" Margin="12,176,0,0" Height="20"  Width="98" Name="prefixBox" CharacterCasing="Upper" MaxLength="10" TextChanged="prefixBox_TextChanged" />
+        <TextBox Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Top" Background="Black" BorderBrush="Red" Foreground="White" IsReadOnly="True"  Margin="12,0,0,173" Height="150" Width="98" Name="generationInfo2" Visibility="Hidden" IsEnabled="True" IsHitTestVisible="False" Focusable="False" TextAlignment="Center" TextWrapping="Wrap" />
+        <TextBox Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Bottom" Background="Black" BorderBrush="Red" Foreground="White" IsReadOnly="True"  Margin="12,0,0,202" Height="121" Width="98" Name="generateInfo" Visibility="Hidden" IsEnabled="True" IsHitTestVisible="False" Focusable="False" TextAlignment="Center" TextWrapping="Wrap" />
+        <TextBox Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Bottom" Background="Black" BorderBrush="Red" Foreground="White" IsReadOnly="True"  Margin="12,0,0,449" Height="20"  Width="98" Name="filePathBox" Visibility="Hidden" BorderThickness="3"  />
+    </Grid>
+</Window>
